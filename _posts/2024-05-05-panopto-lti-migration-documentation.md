@@ -24,9 +24,9 @@ So if you are looking through this documentation, you either a. want to know how
 
 #2. Ok. You aren't going to do number 1? *sigh* Ok then, well first understand the impact of this migration. Issues you should look at include:
 
-    - Panopto Video Quiz Usage (which will break)
-    - Panopto Mashups (which will break)
-    - Panopto Links (which will break too) *Are you noticing a pattern here?*
+- Panopto Video Quiz Usage (which will break)
+- Panopto Mashups (which will break)
+- Panopto Links (which will break too) *Are you noticing a pattern here?*
 
 If you previously used course copy v1 and any course copies you will know that the videos reside in the Panopto video folder of the source course and not in the destination course. This will make fixing any of the videos that are broken very difficult. As of this posting, we are still trying to figure out how we will be able to fix this issue.
 
@@ -34,8 +34,8 @@ If you previously used course copy v1 and any course copies you will know that t
 
 #3. Educate yourself on the differences between v1 and v2 of course copy in Panopto
 
-    - Version 1 creates permission links to the video file where it resides in the source course.
-    - Version 2 creates a reference video that resides in the destination course.
+- Version 1 creates permission links to the video file where it resides in the source course.
+- Version 2 creates a reference video that resides in the destination course.
 
 While version 2 would appear to be the preferred option, Panopto states that version 2 course copies can take up to 24 hours. Any access before this (by the way no notification is provided to the user to tell them that the Panopto course copy has completed) will be accessing the source video (its not clear if the permissions allow access, more testing required) so analytics will show access to the source video and not the video within the course.
 
@@ -56,7 +56,7 @@ Link: LTI 1.3 Documentation from Panopto - [https://support.panopto.com/s/articl
 
 ## Creation of the Panopto Rest API User in Blackboard
 
-### REST API Integration User:
+### REST API Integration User
 	
     Example username: panopto_restapi
     First Name: Panopto
@@ -146,3 +146,67 @@ The placements that come from the LTI 1.3 integration are comparable to the ones
 
 
 ## Panopto LTI Migration Testing Plan
+
+We generated 30+ courses to do our testing (see the course creation and enrollment files below as templates). These were used to create content using the building block and then see how we would have to manipulate the content after the migration. After the migration, we highlighted the following items for testing and validation:
+
+Test Previous links created with the following:
+
+Original
+- [ ] Panopto Video Embed
+- [ ] Panopto Video Link
+- [ ] Panopto Video Quiz
+- [ ] Panopto Student Submission Assignment
+- [ ] Panopto Embed in Text Editor (Sample Item)
+- [ ] Panopto Course Tool Application Link
+
+Ultra
+- [ ] Panopto Video Embed
+- [ ] Panopto Video Link
+- [ ] Panopto Video Quiz
+- [ ] Panopto Student Submission Assignment
+- [ ] Panopto Embed in Text Editor (Sample Item)
+- [ ] Panopto Course Tool Application Link
+
+Our goal was to not only confirm the LTI placements were working and figure out what content that used the building block wasn't, but to also document the following:
+
+- Any changes in workflows / additional steps
+- Any changes in how items display
+
+
+**Blackboard Course Creation and Enrollment Template Files for Download**
+
+[Panopto Course Creation Template - Text File](docs/panopto-lti/panopto-course-creation-list.txt)
+
+[Panopto Course Enrollment Template - Text File](docs/panopto-lti/panopto-course-enrollment-lti-template.txt)
+
+
+### Course Testing Processes
+
+The 30+ courses were created to do various levels of testing regarding how instructors who did course copies before and after the migration might be impacted by the change. Each course had it's own task.
+
+>PANOPTO-LTI-TESTING-001: The items below were created using the Panopto Connector building block
+>- Panopto Course Tool Application Link (In Course Menu)
+>- Under Course Documents
+>    - Panopto Video Embed
+>    - Panopto Video Link
+>    - Panopto Video Quiz
+>    - Panopto Student Submission Assignment
+>    - Panopto Embed in Text Editor (Sample Item)
+>    - Panopto Embed Video code without LTI
+>    - Panopto Video Link without LTI
+>    - Panopto Embed Video in Text Editor within an Announcement
+>
+>PANOPTO-LTI-TESTING-002: The items from PANOPTO-LTI-TESTING-001 were copied to 002 before the migration to see how course copied content prior to the migration would be effected.
+>
+>PANOPTO-LTI-TESTING-003: The same content in PANOPTO-LTI-TESTING-001 was recreated in this section so we had a backup for testing if something went wrong with the first section.
+>
+>PANOPTO-LTI-TESTING-004: We copied (using Blackboard Course Copy) a course that heavily utilized the Panopto Video Embed tool from the building block to see how it would be impacted. This was done pre LTI Migration.
+>
+>PANOPTO-LTI-TESTING-005: We copied (using Blackboard Course Copy) a course that heavily utilized the Panopto Video Link tool from the building block to see how it would be impacted. This was done pre LTI Migration.
+>
+>PANOPTO-LTI-TESTING-006: We copied (using Blackboard Course Copy) a course that heavily utilized the Panopto Video Quiz tool from the building block to see how it would be impacted. This was done pre LTI Migration.
+>
+
+The
+
+
