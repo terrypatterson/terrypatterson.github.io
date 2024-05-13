@@ -175,7 +175,9 @@ Our goal was to not only confirm the LTI placements were working and figure out 
 
 **Blackboard Course Creation and Enrollment Template Files for Download**
 
+[Panopto Course Creation Template - Text File](docs/panopto-lti/panopto-course-creation-lti.txt)
 
+[Panopto Course Enrollment Template - Text File](docs/panopto-lti/panopto-course-enrollment-lti-template.txt)
 
 
 ### Course Testing Processes
