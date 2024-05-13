@@ -6,6 +6,9 @@ tags: [LTI, panopto, getting-started]
 ---
 
 # Panopto LTI Migration
+
+*Note: These paragraphs contain my documentation notes, comments and information. They may not be fully formed or may use old data. I work to keep this information as up to date as possible. If you have questions about something use the links to contact me. This is a work in progress.*
+
 ## Getting Started
 
 This document covers the May 2024 migration of my institution from the Panopto Building block integration to the LTI integration. 
@@ -234,6 +237,8 @@ The next six course sections we repeated the same course copy and course import 
 
 
 ## Testing Notes
+
+Please note that the notes below are raw and may not have fully fleshed out information at this time. They are a work in progress.
 
 - [ ] Test logins via the hosted site and via Blackboard to make sure all is well.
 - [ ] Test provisioning a new course folder to ensure you want the option Prepend Course Code set to True.
