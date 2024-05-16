@@ -37,18 +37,18 @@ Please note that the notes below are raw and may not have fully fleshed out info
 
 | | Building Block Created | LTI Created | Building Block (Copy) | Building Block (Import) |
 |---------|----------------|-------------|-----------------------|-------------------------|
-|Create Panopto Video Link | | | | |
-|Create Panopto Video Embed (Content Item)| | | | |
-|Create Panopto Video Quiz | | | | |
-|Create Panopto Student Submission | | | |
+|Create Panopto Video Link | | ✔️ | | |
+|Create Panopto Video Embed (Content Item)| | ✔️ | | |
+|Create Panopto Video Quiz | | ✔️ | | |
+|Create Panopto Student Submission | | ✔️ | |
 
 
 | | Building Block Created | LTI Created | Building Block (Copy) | Building Block (Import) |
 |---------|----------------|-------------|-----------------------|-------------------------|
-|Access Panopto Video Link | | | | |
-|Access Panopto Video Embed (Content Item)| | | | |
+|Access Panopto Video Link | ✔️ | ✔️ | | |
+|Access Panopto Video Embed (Content Item)| ✔️ | ✔️ | | |
 |Attempt Panopto Video Quiz | ❌ | ✔️ | | |
-|Attempt Panopto Student Submission | ✔️ | | |
+|Attempt Panopto Student Submission | ✔️ | ✔️ | |
 
 
 
