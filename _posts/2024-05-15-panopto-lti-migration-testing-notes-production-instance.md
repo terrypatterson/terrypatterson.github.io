@@ -55,7 +55,7 @@ Please note that the notes below are raw and may not have fully fleshed out info
 **Information:** In previous LTI embed issues (Such as VidGrid) the course_pk1 value, _123456_1 for example, was hard coded into the HTML code if a video was embedded into a content item. We verified that if a Panopto video is embedded with the LTI tool in a content area, and the content item is copied to a new course, the course_pk1 value will change in the HTML code. This verifies that if you copy the content between courses it won't be an issue. However instructors should not try to copy and paste the embed into another text editor if they are using the Original Experience.
 
 
-**Information:** Course copy v2, [https://terrypatterson.github.io/posts/panopto-lti-migration-documentation/](which I mentioned in the Getting Started post), creates reference links within the course folder when 
+**Information:** Course copy v2, [which I mentioned in the Getting Started post](https://terrypatterson.github.io/posts/panopto-lti-migration-documentation/), creates reference links within the course folder when 
 
 **Issue:** 
 
