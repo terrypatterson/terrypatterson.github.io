@@ -55,7 +55,22 @@ Please note that the notes below are raw and may not have fully fleshed out info
 **Information:** In previous LTI embed issues (Such as VidGrid) the course_pk1 value, _123456_1 for example, was hard coded into the HTML code if a video was embedded into a content item. We verified that if a Panopto video is embedded with the LTI tool in a content area, and the content item is copied to a new course, the course_pk1 value will change in the HTML code. This verifies that if you copy the content between courses it won't be an issue. However instructors should not try to copy and paste the embed into another text editor if they are using the Original Experience.
 
 
-**Information:** Course copy v2, [which I mentioned in the Getting Started post](https://terrypatterson.github.io/posts/panopto-lti-migration-documentation/), creates reference links within the course folder when 
+**Information:** Course copy v2, [which I mentioned in the Getting Started post](https://terrypatterson.github.io/posts/panopto-lti-migration-documentation/), creates reference links within the destination course folder in Panopto. Now there are some exceptions:
+
+* Reference copies are only made from content that resides within the source course folder.
+* Any content within a users folder will do something
+* Panopto's course copy process does not kick off at the same time when a course copy runs within Blackboard. To start the process, the instructor should access the Panopto course folder. This can be done by either creating a tool link to the Panopto Course Folder tool or by clicking on the Panopto Course Folder Tool in the Tools area for Original users or in the Books and Tools or Content Market areas for Ultra Users. See the images below.
+
+In Original...
+
+![A cropped screenshot of a user creating a Panopto Course Folder tool link in the course menu of a Blackboard original course and cropped screen capture of the Panopto Course Folder tool link in the Tools area of a Blackboard original course.](assets/img/posts/panopto-lti/original-course-folder-links.png)
+
+
+![A cropped screenshot of a link to access the Panopto Course Folder tool in the Ultra Content Market and a cropped screenshot of a link to access the Panopto Course Folder tool from the Books and Tools area of an Ultra course.](assets/img/posts/panopto-lti/ultra-course-folder-links.png)
+
+
+
+Once a Panopto Course Copy starts, it may take up to 24 hours. Our testing found that on a copy of about 20 videos normally took under an hour.
 
 **Issue:** 
 
