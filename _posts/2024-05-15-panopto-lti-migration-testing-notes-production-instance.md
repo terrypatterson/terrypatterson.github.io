@@ -37,22 +37,25 @@ Please note that the notes below are raw and may not have fully fleshed out info
 
 | | Building Block Created | LTI Created | Building Block (Copy) | Building Block (Import) |
 |---------|----------------|-------------|-----------------------|-------------------------|
-|Create Panopto Video Link | | ✔️ | | |
-|Create Panopto Video Embed (Content Item)| | ✔️ | | |
-|Create Panopto Video Quiz | | ✔️ | | |
-|Create Panopto Student Submission | | ✔️ | |
+|Create Panopto Video Link | ✔️* | ✔️ | ✔️* | ✔️* |
+|Create Panopto Video Embed (Content Item)| ✔️* | ✔️ | ✔️* | ✔️* |
+|Create Panopto Video Quiz | ✔️* | ✔️ | ✔️* | ✔️* |
+|Create Panopto Student Submission | ✔️* | ✔️ | ✔️* | ✔️* |
 
 
 | | Building Block Created | LTI Created | Building Block (Copy) | Building Block (Import) |
 |---------|----------------|-------------|-----------------------|-------------------------|
-|Access Panopto Video Link | ✔️ | ✔️ | | |
-|Access Panopto Video Embed (Content Item)| ✔️ | ✔️ | | |
-|Attempt Panopto Video Quiz | ❌ | ✔️ | | |
-|Attempt Panopto Student Submission | ✔️ | ✔️ | |
+|Access Panopto Video Link | ✔️* | ✔️ | ✔️ | ✔️ |
+|Access Panopto Video Embed (Content Item)| ✔️* | ✔️ | ✔️ | ✔️ |
+|Attempt Panopto Video Quiz | ❌ | ✔️ | ✔️ | ✔️ |
+|Attempt Panopto Student Submission | ✔️* | ✔️ | ✔️ | ✔️ |
+
+\* Denotes that the item is broken, but behaving as expected according to Panopto Support.
+
+**Information:** In previous LTI embed issues (Such as VidGrid) the course_pk1 value, _123456_1 for example, was hard coded into the HTML code if a video was embedded into a content item. We verified that if a Panopto video is embedded with the LTI tool in a content area, and the content item is copied to a new course, the course_pk1 value will change in the HTML code. This verifies that if you copy the content between courses it won't be an issue. However instructors should not try to copy and paste the embed into another text editor if they are using the Original Experience.
 
 
-
-**Information:**
+**Information:** Course copy v2, [https://terrypatterson.github.io/posts/panopto-lti-migration-documentation/](which I mentioned in the Getting Started post), creates reference links within the course folder when 
 
 **Issue:** 
 
