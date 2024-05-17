@@ -65,6 +65,7 @@ In Original...
 
 ![A cropped screenshot of a user creating a Panopto Course Folder tool link in the course menu of a Blackboard original course and cropped screen capture of the Panopto Course Folder tool link in the Tools area of a Blackboard original course.](assets/img/posts/panopto-lti/original-course-folder-links.png)
 
+In Ultra...
 
 ![A cropped screenshot of a link to access the Panopto Course Folder tool in the Ultra Content Market and a cropped screenshot of a link to access the Panopto Course Folder tool from the Books and Tools area of an Ultra course.](assets/img/posts/panopto-lti/ultra-course-folder-links.png)
 
