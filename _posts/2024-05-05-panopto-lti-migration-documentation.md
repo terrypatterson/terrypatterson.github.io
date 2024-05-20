@@ -1,8 +1,8 @@
 ---
-title: Panopto LTI Migration Documentation - Getting Started
+title: Panopto LTI Migration Documentation
 date: 2024-05-09 09:00:00 -0600
 categories: [LTI Migration, Panopto]
-tags: [LTI, panopto, getting-started]
+tags: [LTI, panopto, main-documentation, documentation]
 ---
 
 # Panopto LTI Migration
