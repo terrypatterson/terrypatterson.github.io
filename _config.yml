@@ -14,12 +14,12 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Terry Patterson Documentation # the main title
+title: Ultra By The Numbers # the main title
 
-tagline: If I did it...this is how I would do it. # it will display as the sub-title
+tagline: Anthology Together 2024 Presentation # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  My documentation focused website for things I do with Blackboard.
+  The companion website for the Ultra By The Numbers presentation from Anthology Together 2024.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
