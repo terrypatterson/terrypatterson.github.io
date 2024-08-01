@@ -134,7 +134,6 @@ group by cm.course_id, cm.course_name, t."name", tbl_a.panopto_place_embed, tbl_
 If you need to only pull a specific set of data from Blackboard, you can use the queries below to find the information on the various building block types.
 
 ```
-
 --- Panopto Quizzes
 select distinct(cc.pk1), t."name" , cm.course_id, cm.course_name, cc.title, cc.cnthndlr_handle
 from course_main cm
@@ -150,8 +149,8 @@ from course_main cm
    on ct.term_pk1 = t.pk1
 where cc.cnthndlr_handle like 'resource/x-bb-bltiplacement-panopto-quiz-lti'
 order by t."name", cc.pk1
-
-
+```
+```
 --- Panopto Building Block Mashup
 select distinct(cc.pk1), t."name" , cm.course_id, cm.course_name, cc.title, cc.cnthndlr_handle
 from course_main cm
@@ -167,8 +166,8 @@ from course_main cm
    on ct.term_pk1 = t.pk1
 where cc.cnthndlr_handle like 'resource/bb-panopto-bc-mashup'
 order by t."name", cc.pk1
-
-
+```
+```
 --- Panopto Building Block Hyperlinks
 select distinct(cc.pk1), t."name" , cm.course_id, cm.course_name, cc.title, cc.cnthndlr_handle
 from course_main cm
