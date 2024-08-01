@@ -33,7 +33,7 @@ You will need to replace the following in the query below.
 |INSTANCE_NAME|Replace this with the Instance Name that coordinates with your building block provider configuration within Panopto.|
 
 
-```
+``` sql
 select distinct(cc.pk1),
 	   cm.course_id as "Course ID",
 	   cm.course_name as "Course Name",
@@ -92,7 +92,7 @@ This output will be slightly different. It will output the following
 
 **Warning: The email and names will be duplicated, so deduplicate any emails when you pull from the output.**
 
-```
+``` sql
 select distinct(cm.course_id),
 			   cm.course_name, 
 			   STRING_AGG(u.email, ':') AS emails,
@@ -133,7 +133,7 @@ group by cm.course_id, cm.course_name, t."name", tbl_a.panopto_place_embed, tbl_
 
 If you need to only pull a specific set of data from Blackboard, you can use the queries below to find the information on the various building block types.
 
-```
+``` sql
 --- Panopto Quizzes
 select distinct(cc.pk1), t."name" , cm.course_id, cm.course_name, cc.title, cc.cnthndlr_handle
 from course_main cm
@@ -150,7 +150,7 @@ from course_main cm
 where cc.cnthndlr_handle like 'resource/x-bb-bltiplacement-panopto-quiz-lti'
 order by t."name", cc.pk1
 ```
-```
+``` sql
 --- Panopto Building Block Mashup
 select distinct(cc.pk1), t."name" , cm.course_id, cm.course_name, cc.title, cc.cnthndlr_handle
 from course_main cm
@@ -167,7 +167,7 @@ from course_main cm
 where cc.cnthndlr_handle like 'resource/bb-panopto-bc-mashup'
 order by t."name", cc.pk1
 ```
-```
+``` sql
 --- Panopto Building Block Hyperlinks
 select distinct(cc.pk1), t."name" , cm.course_id, cm.course_name, cc.title, cc.cnthndlr_handle
 from course_main cm
