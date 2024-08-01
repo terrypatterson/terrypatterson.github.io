@@ -184,3 +184,4 @@ from course_main cm
    on ct.term_pk1 = t.pk1
 where cc.cnthndlr_handle like 'hyperlink/coursecast'
 order by t."name", cc.pk1
+```
