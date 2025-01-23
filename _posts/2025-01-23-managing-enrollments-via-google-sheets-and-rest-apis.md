@@ -5,7 +5,7 @@ categories: [Enrollments, Rest APIs, Python]
 tags: [documentation, enrollments, rest api, python, scripting]
 ---
 
-# Managing Blackboard Enrollments using Google Sheets and Rest API via Python Script
+# Managing Blackboard Enrollments using Google Sheets and Rest API via Python Script (Part 1)
 
 ## Introduction
 
@@ -167,3 +167,106 @@ for line in textRow:
 ```
 
 **Author's Note:** *I will just state here that I think I did a good job of documenting and commenting the script so someone could follow along and understand what was going on.*
+
+Now the script begins to process the row and use the bbrest library.
+
+```python
+
+    # Check to see if Rest API bearer token is expired.
+    s = bb.is_expired()
+    if s == True:
+        # Refresh bearer token
+        ref = bb.refresh_token()
+
+    # Check to see if the course exists and if it's disabled.
+    courseCheck = bb.GetCourse(courseId=course)
+    courseCheckStatus = courseCheck.status_code
+    
+    # 404 code means the course doesn't exist in Blackboard. 
+    if courseCheckStatus != 200:
+        # Logging the event.
+        logEvent = course + ' does not exist in Blackboard or isn\'t properly formatted in the feed file. Skipping enrollment...\n\n'
+        log.write(logEvent)
+        totalCount = totalCount + 1
+        errorCount = errorCount + 1
+
+    else:
+        courseOutput = courseCheck.json()
+        courseAvail = courseOutput['availability']['available']
+
+        if (courseAvail == 'Disabled'):
+            # Logging the event
+            logEvent = course + ' has been disabled in Blackboard. Enrollments are not allowed. Skipping enrollment for ' + userid + '.\n\n'
+            log.write(logEvent)
+            totalCount = totalCount + 1
+            errorCount = errorCount + 1
+
+        else:
+            userCheck = bb.GetUser(userId=userid)
+            userCheckStatus = userCheck.status_code
+
+            if userCheckStatus != 200:
+                logEvent = userid + ' does not exist in Blackboard or isn\'t properly formatted in the feed file. Skipping enrollment...\n\n'
+                log.write(logEvent)
+                totalCount = totalCount + 1
+                errorCount = errorCount + 1
+        
+```
+
+The script above check to see if the course existed and wasn't disabled. It also checked to see if the user id exists in the Blackboard instance too.
+
+Once that was done, we need to see if the user id is enrolled already in the course. Some instructors would manually add the users to their courses out of habit and I didn't want to stop that process. So I needed to check for this, also because the script was also used to unassign enrollments in courses 
+
+
+```python
+            # Check the status code from the Membership result and either create the membership or update it.
+            enrollCheck = bb.GetMembership(courseId=course,userId=userid)
+            enrollCheckStatus = enrollCheck.status_code
+
+            # 404 status means membership doesn't exist, so create the membership in Blackboard.
+            if enrollCheckStatus == 404:
+                r = bb.CreateMembership(courseId=course,userId=userid,payload={"dataSourceId": dataSource,"availability": {"available": available},"courseRoleId": role})
+                statusCode = r.status_code
+                totalCount = totalCount + 1
+                successCount = successCount + 1
+                createCount = createCount + 1
+
+                # Logging the membership creation event.
+                logEvent = userid + ' has been enrolled as ' + role + ' in the course ' + course + ' with the availability of ' + available + '.\nBlackboard provided the following response status code ' + str(statusCode) + '.\n\n'
+                log.write(logEvent)
+
+            # 200 status means membership exists, so update the membership in Blackboard.
+            elif enrollCheckStatus == 200:
+                r = bb.UpdateMembership(courseId=course,userId=userid,payload={"dataSourceId": dataSource,"availability": {"available": available},"courseRoleId": role})
+                statusCode = r.status_code
+                totalCount = totalCount + 1
+                successCount = successCount + 1
+                updateCount = updateCount + 1
+
+                # Logging the membership update event.
+                logEvent = userid + ' has been enrolled as ' + role + ' in the course ' + course + ' with the availability of ' + available + '.\nBlackboard provided the following response status code ' + str(statusCode) + '.\n\n'
+                log.write(logEvent)
+
+            else:
+                enrollOutput = enrollCheck.json()
+                enrollCheckMsg = enrollOutput['message']
+                print('Error: ' + str(enrollCheckStatus) + ' was provided from Blackboard when searching for ' + course + ' with the message \"' + enrollCheckMsg + '\". \n Skipping record: ' + str(value) + '.')
+                totalCount = totalCount + 1
+                errorCount = errorCount + 1
+
+finalOutput = 'The script has completed.\nINFO: ' + str(totalCount) + ' records were processed.\nSUCCESS: ' + str(successCount) + ' records were processed successfully.\nFAIL: ' + str(errorCount) + ' records failed during processing.\nCREATE: ' + str(createCount) + ' enrollments created in the process.\nUPDATE: ' + str(updateCount) + ' enrollments update in the process.\n\n'
+log.write(finalOutput)
+
+# datetime object containing current date and time
+now = datetime.now()
+
+dt_end_string = now.strftime("%m/%d/%Y %H:%M:%S")
+log_end_timedate = "Script finished processing at: " + dt_end_string + '.\n\n'
+log.write(log_end_timedate)
+log.close()
+print(log_end_timedate)
+print(finalOutput)
+
+
+
+```
