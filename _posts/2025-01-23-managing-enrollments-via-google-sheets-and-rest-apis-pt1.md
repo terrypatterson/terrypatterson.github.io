@@ -281,4 +281,4 @@ The first iteration of this script did the basics, but there were issues.
 - File had to directly point to the absolute file path for the file.
 - Had to remove extra commas by hand instead of removing them via a function in the script.
 
-Part 2 reviews the second version of this script [Managing Enrollments with Google Sheets and Rest APIs](https://terrypatterson.github.io/posts/managing-enrollments-via-google-sheets-and-rest-apis-pt2/)
+Part 2 reviews the second version of this script [Managing Enrollments with Google Sheets and Rest APIs (Part 2)](https://terrypatterson.github.io/posts/managing-enrollments-via-google-sheets-and-rest-apis-pt2/)
