@@ -5,9 +5,7 @@ categories: [Python, Rest APIs, Enrollments]
 tags: [documentation, enrollments, rest api, python, scripting]
 ---
 
-# Managing Blackboard Enrollments using Google Sheets and Rest API via Python Script (Part 1)
-
-## Introduction
+# Introduction
 
  In Fall 2022, a team that manages the enrollment of tutors, supplemental instructors, and academic coaches approached the department with the request to help them enroll these users into their courses at the start of the coming Spring 2023 term. They had been keeping their enrollments in a Google spreadsheet (aka Google Sheets) and wanted to know if we could process this file. I was working on my Python certification so automating this with a Python script seemed like a great way to test out my python scripting skills and complete their task.
 
@@ -24,7 +22,7 @@ BLACKBOARD-COURSE-ID-004,j1234,T,Y,,,,
 BLACKBOARD-COURSE-ID-005,j1234,T,Y,,,,
 ```
 
-## My Initial Script
+# My Initial Script
 
 So my first pass at this process was pretty elementary.
 
@@ -56,7 +54,7 @@ UPDATE: 136 enrollments update in the process.
 Script finished processing at: 07/15/2024 14:45:00.
 ```
 
-## Review of the Script
+# Review of the Script
 
 First the script configures the bbrest library to connect to the appropriate instance. This is also when I created the log file for the script.
 
@@ -275,7 +273,7 @@ print(finalOutput)
 
 Once every row was processed, I output the end of the process and the counts for the process to the log file and the terminal window.
 
-## Issues with the first version of this script
+# Issues with the first version of this script
 
 The first iteration of this script did the basics, but there were issues.
 
