@@ -22,7 +22,7 @@ BLACKBOARD-COURSE-ID-004,j1234,T,Y,,,,
 BLACKBOARD-COURSE-ID-005,j1234,T,Y,,,,
 ```
 
-# My Initial Script
+## My Initial Script
 
 So my first pass at this process was pretty elementary.
 
@@ -54,7 +54,7 @@ UPDATE: 136 enrollments update in the process.
 Script finished processing at: 07/15/2024 14:45:00.
 ```
 
-# Review of the Script
+## Review of the Script
 
 First the script configures the bbrest library to connect to the appropriate instance. This is also when I created the log file for the script.
 
@@ -273,11 +273,12 @@ print(finalOutput)
 
 Once every row was processed, I output the end of the process and the counts for the process to the log file and the terminal window.
 
-# Issues with the first version of this script
+## Issues with the first version of this script
 
 The first iteration of this script did the basics, but there were issues.
 
 - Capitalized Letters in the username cause failure (break fix applied)
 - File had to directly point to the absolute file path for the file.
-- Had to remove extra commas by hand instead of removing them via a process.
+- Had to remove extra commas by hand instead of removing them via a function in the script.
 
+Part 2 reviews the second version of this script [Managing Enrollments with Google Sheets and Rest APIs](https://terrypatterson.github.io/posts/managing-enrollments-via-google-sheets-and-rest-apis-pt2/)
