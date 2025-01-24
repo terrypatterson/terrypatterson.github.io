@@ -1,7 +1,7 @@
 ---
-title: Managing Enrollments with Google Sheets and Rest APIs
+title: Managing Enrollments with Google Sheets and Rest APIs (Part 2)
 date: 2025-01-23 09:00:00 -0600
-categories: [Enrollments, Rest APIs, Python]
+categories: [Python, Rest APIs, Enrollments]
 tags: [documentation, enrollments, rest api, python, scripting]
 ---
 
@@ -24,7 +24,7 @@ BLACKBOARD-COURSE-ID-004,j1234,T,Y,,,,
 BLACKBOARD-COURSE-ID-005,j1234,T,Y,,,,
 ```
 
-## My Intial Script
+## My Initial Script
 
 So my first pass at this process was pretty elementary.
 
@@ -55,6 +55,8 @@ UPDATE: 136 enrollments update in the process.
 
 Script finished processing at: 07/15/2024 14:45:00.
 ```
+
+## Review of the Script
 
 First the script configures the bbrest library to connect to the appropriate instance. This is also when I created the log file for the script.
 
@@ -215,7 +217,7 @@ Now the script begins to process the row and use the bbrest library.
 
 The script above check to see if the course existed and wasn't disabled. It also checked to see if the user id exists in the Blackboard instance too.
 
-Once that was done, we need to see if the user id is enrolled already in the course. Some instructors would manually add the users to their courses out of habit and I didn't want to stop that process. So I needed to check for this, also because the script was also used to unassign enrollments in courses 
+Once that was done, we need to see if the user id is enrolled already in the course. Some instructors would manually add the users to their courses out of habit and I didn't want to stop that process. So I needed to check for this, because the script was also used to unassign enrollments in courses. 
 
 
 ```python
@@ -270,3 +272,14 @@ print(finalOutput)
 
 
 ```
+
+Once every row was processed, I output the end of the process and the counts for the process to the log file and the terminal window.
+
+## Issues with the first version of this script
+
+The first iteration of this script did the basics, but there were issues.
+
+- Capitalized Letters in the username cause failure (break fix applied)
+- File had to directly point to the absolute file path for the file.
+- Had to remove extra commas by hand instead of removing them via a process.
+
