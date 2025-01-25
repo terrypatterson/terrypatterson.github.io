@@ -1,7 +1,7 @@
 ---
 title: Panopto LTI Migration Documentation -  SQL Queries
 date: 2024-05-09 09:00:00 -0600
-categories: [LTI Migration, Panopto]
+categories: [LTI, Panopto, Migration, SQL]
 tags: [LTI, panopto, main-documentation, documentation, queries]
 ---
 

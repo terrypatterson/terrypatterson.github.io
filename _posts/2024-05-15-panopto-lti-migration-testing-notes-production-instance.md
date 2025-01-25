@@ -1,7 +1,7 @@
 ---
 title: Panopto LTI Migration Documentation - Production - Testing Notes
 date: 2024-05-15 12:00:00 -0500
-categories: [LTI Migration, Panopto]
+categories: [LTI, Panopto, Migration]
 tags: [LTI, panopto, testing-notes, production-instance]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Working with Blackboard Observers - Configuration, Gotchas, and Best Practices
-date: 2024-12-06 09:00:00 -0600
-categories: [Observers, User Configurations]
+date: 2025-03-01 09:00:00 -0600
+categories: [User Configurations, Observers]
 tags: [documentation, observers, best practices, issues]
 ---
 
