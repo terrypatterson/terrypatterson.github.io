@@ -24,6 +24,28 @@
     scrollbar-width: none;
 }
 
-.container {
-    margin-left: 60px;
+@media (min-width: 1400px) {
+    .container {
+        margin-left: 60px;;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        margin-left: 60px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        margin-left: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        margin-left: 60px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+    
+    }
 }
