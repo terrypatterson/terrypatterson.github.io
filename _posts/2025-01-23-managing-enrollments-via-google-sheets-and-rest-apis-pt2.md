@@ -330,4 +330,8 @@ main()
 
 ```
 
+## Next Steps
+
+The next iteration of this script would be automation on demand. This would use the Google Sheet Rest APIs to allow the script to be started after a save or update to the last edited field within the sheet. This would mean that the team would have control of when the updates would happen and could do it at will without me having to manually process the file. This is a big jump as it would require access to the Rest APIs from our Application Suppor team and would probably require Security approval as well.
+
 
