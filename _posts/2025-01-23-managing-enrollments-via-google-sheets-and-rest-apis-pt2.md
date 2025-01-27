@@ -162,10 +162,8 @@ def process_csv(input_filename, output_directory, output_filename):
 
 
 ```
-This last function moves the entire enrollment process in the first version under a function which also calls the other inner functions to complete the process. This code is quite lengthy, so click on the Display the Code link below to show the full code.
+This last function moves the entire enrollment process in the first version under a function which also calls the other inner functions to complete the process. This code is quite lengthy.
 
-<details>
-  <summary>Display the Code</summary>
 
 ```python
 
@@ -331,5 +329,5 @@ def main():
 main()
 
 ```
-</details>
+
 
