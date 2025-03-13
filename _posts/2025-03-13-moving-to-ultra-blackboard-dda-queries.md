@@ -1,5 +1,5 @@
 ---
-title: Blackboard DDA Queries
+title: Blackboard DDA Queries When Moving to Blackboard Ultra
 date: 2025-03-13 09:00:00 -0600
 categories: [SQL, DDA]
 tags: [SQL, DDA, queries, Ultra]
