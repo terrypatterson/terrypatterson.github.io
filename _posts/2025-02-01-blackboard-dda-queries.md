@@ -22,7 +22,7 @@ WHERE DS.BATCH_UID = 'SYSTEM'
 
 ```
 
-This generates output that will be easy to copy and paste into a text file for processing. You can change the '|' for whatever delimiter you currently use. You may also change the 219F_COURSES to the data source key name that you want to move the courses under.
+This generates output that will be easy to copy and paste into a text file for processing. You can change the \'|\' for whatever delimiter you currently use. You may also change the 219F_COURSES to the data source key name that you want to move the courses under.
 
 ## Grab Information about the Device and Location of a User
 
