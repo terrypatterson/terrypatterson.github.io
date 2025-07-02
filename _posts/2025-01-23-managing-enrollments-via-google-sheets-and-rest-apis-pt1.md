@@ -268,7 +268,6 @@ print(log_end_timedate)
 print(finalOutput)
 
 
-
 ```
 
 Once every row was processed, I output the end of the process and the counts for the process to the log file and the terminal window.
