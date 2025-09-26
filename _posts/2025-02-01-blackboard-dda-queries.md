@@ -7,6 +7,11 @@ tags: [SQL, DDA, queries]
 
 Here are some of the top Blackboard DDA Queries that have saved me time and effort.
 
+<div style="border: 1px solid; padding:10px; font-style: italic; font-weight: bold;">
+Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.<br /><br />
+I use Artifical Intelligence services (ChatGPT, Claude, Microsoft Copilot, Google Gemini, and  Perplexity) to help me plan, develop, and troubleshoot documentation and scripts shared on this site.
+</div><br />
+
 ## Generate an SIS Feed File from a Database Query
 
 Sometimes an admin needs to make a change to multiple courses at the same time. An SIS flat feed file can be the simplest way to do that, but generating that feed file could be a pain. Well it isn't with this SQL query. In this example, I'm taking all the cross listed courses (in this system they contain an -XLM- code in the Course ID) which are in the SYSTEM dsk and move them to the appropriate DSK so they will be archived.

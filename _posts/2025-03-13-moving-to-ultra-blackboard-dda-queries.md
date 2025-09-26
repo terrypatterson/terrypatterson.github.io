@@ -9,6 +9,11 @@ Here are some Blackboard DDA Queries that I've developed during our migration to
 
 > Please note these queries may be ineffenient, feel free to make improvements and provide feedback.
 
+<div style="border: 1px solid; padding:10px; font-style: italic; font-weight: bold;">
+Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.<br /><br />
+I use Artifical Intelligence services (ChatGPT, Claude, Microsoft Copilot, Google Gemini, and  Perplexity) to help me plan, develop, and troubleshoot documentation and scripts shared on this site.
+</div><br />
+
 ## What deployed tests are using rubric associations with test questions
 
 Blackboard Original Experience allowed the instructor the ability to associated a rubric with an essay question within a test. Ultra does not have this feature at the time we were implementing the course experience, therefore we needed to understand the instructor impact and document it for internal communications and communications with Anthology. Here's the query I put together for it.

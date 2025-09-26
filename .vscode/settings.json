@@ -26,5 +26,11 @@
   // Run tasks in macOS
   "terminal.integrated.profiles.osx": {
     "zsh": { "path": "/bin/zsh", "args": ["-l", "-i"] }
+  },
+  "MD033": {
+    "allowed_elements": [
+      "br",
+      "div"
+    ]
   }
 }

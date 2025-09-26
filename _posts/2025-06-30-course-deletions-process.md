@@ -9,7 +9,10 @@ tags: [documentation, course removal, selenium, python, scripting]
 
 Course deletions have always been a difficultly in Blackboard. If you were self-hosted and didn't have enough database or application server power, your system could go down with the simple deletion of some courses. (I know, I did it.). Then even in managed hosting or SaaS environments, deleting thousands of courses could delay course copies or imports for hours while the task workers processed these requests. So how can you delete courses without having either impact? This is why I wrote this script.
 
-**Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.**
+<div style="border: 1px solid; padding:10px; font-style: italic; font-weight: bold;">
+Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.<br /><br />
+I use Artifical Intelligence services (ChatGPT, Claude, Microsoft Copilot, Google Gemini, and  Perplexity) to help me plan, develop, and troubleshoot documentation and scripts shared on this site.
+</div><br />
 
 So this was built to delete courses in small batches so it wouldn't overtax the environment nor block the processing of other tasks such as course copies or imports. It also removed me from having to babysit the process so I could enjoy weekends and/or vacations.
 

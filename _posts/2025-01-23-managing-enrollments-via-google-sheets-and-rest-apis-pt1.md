@@ -9,7 +9,10 @@ tags: [documentation, enrollments, rest api, python, scripting]
 
  In Fall 2022, a team that manages the enrollment of tutors, supplemental instructors, and academic coaches approached the department with the request to help them enroll these users into their courses at the start of the coming Spring 2023 term. They had been keeping their enrollments in a Google spreadsheet (aka Google Sheets) and wanted to know if we could process this file. I was working on my Python certification so automating this with a Python script seemed like a great way to test out my python scripting skills and complete their task.
 
-**Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.**
+<div style="border: 1px solid; padding:10px; font-style: italic; font-weight: bold;">
+Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.<br /><br />
+I use Artifical Intelligence services (ChatGPT, Claude, Microsoft Copilot, Google Gemini, and  Perplexity) to help me plan, develop, and troubleshoot documentation and scripts shared on this site.
+</div><br />
 
 Here is a sample of a csv that came out of their Google Sheet.
 

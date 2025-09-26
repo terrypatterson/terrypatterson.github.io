@@ -6,6 +6,12 @@ tags: [LTI, panopto, main-documentation, documentation, queries]
 ---
 
 # Panopto LTI Migration
+
+<div style="border: 1px solid; padding:10px; font-style: italic; font-weight: bold;">
+Note: This is a living document, some information maybe incorrect or incomplete. Please contact me if you have any updates and/or corrections.<br /><br />
+I use Artifical Intelligence services (ChatGPT, Claude, Microsoft Copilot, Google Gemini, and  Perplexity) to help me plan, develop, and troubleshoot documentation and scripts shared on this site.
+</div><br />
+
 ## SQL Queries
 
 ### Find Panopto Content Items within Blackboard Courses
